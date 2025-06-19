@@ -1,0 +1,3756 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+   <head>
+   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bc459c9d-4f48-42f9-8136-ae9b07ca821d/deuds78-7225263d-bad0-4e48-90b1-c2ced561e8d1.png/v1/fill/w_400,h_401/charizard___stock_icon_by_chloehoe720_deuds78-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAxIiwicGF0aCI6IlwvZlwvYmM0NTljOWQtNGY0OC00MmY5LTgxMzYtYWU5YjA3Y2E4MjFkXC9kZXVkczc4LTcyMjUyNjNkLWJhZDAtNGU0OC05MGIxLWMyY2VkNTYxZThkMS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.dIHUdqNsFKdwJujj4LQfLTN1hujiqhNTAB86S0Lx5wk">
+      <meta charset="UTF-8">
+      <title> ServiceDesk Hub </title>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+         *, button, input{
+         margin: 0px;
+         padding: 0px;
+         box-sizing: border-box;
+         font-family: 'Rubik', sans-serif;
+         }
+         :root{
+         --bg-shape-color:linear-gradient(120deg,  #343A4F, #0F1620) ;
+         --lightblue: #89cff0;
+         --darkblue: #4A4EEE;
+         --text-color: #D5E1EF;
+         --cherry: linear-gradient(90deg, #eb3349, #f45c43);
+         --rose : linear-gradient(90deg, #ffafbd, #ffc3a0);
+         --graybo : linear-gradient(90deg, #868f96, #ebebeb);
+         --bourbon : linear-gradient(90deg, #ec6f66,  #f3a183);
+         --virgin : linear-gradient(90deg, #7b4397, #dc2430);
+         --sblue : linear-gradient(90deg, #2193b0, #6dd5ed);
+         --dgray : linear-gradient(90deg, #454545, #707070);
+         --gbeach : linear-gradient(90deg, #02aab0, #00cdac); 
+         --socialive : linear-gradient(90deg, #6dd5ed, #48b1bf);
+         --frost : linear-gradient(90deg, #000428, #004e92);
+         --seafoam : linear-gradient(-90deg, #90F9C4, #39F3BB);
+         --grayvy : linear-gradient(90deg, #596164, #868f96);
+         --asg : linear-gradient(90deg, #db9688, #d66d9c, #8556b5, #3175ff);
+         --secret : linear-gradient(90deg, #232323, #232323);
+         --oracle : linear-gradient(90deg, #e32124, #e32124);
+         --asx : linear-gradient(90deg, #0c3b6c, #0c3b6c);
+         --gsu : linear-gradient(90deg, #d8e450 ,#d8e450);
+         --cx : linear-gradient(90deg, #009edb, #009edb);
+		 --excellg : linear-gradient(90deg, #5a2672, #342560);
+		 --dg : linear-gradient(90deg, #539e6a, #14452F);
+         --excelg : linear-gradient(90deg, #73cc8d, #73cc8d);
+         --exceldg : linear-gradient(90deg, #73cc8d, #539e6a);
+         --mrwaora : linear-gradient(90deg, #d28238, #c56004);
+         --mrwateal : linear-gradient(90deg, #00839b, #3fa9bd);
+         --mrwacyan : linear-gradient(90deg, #3fa9bd, #5aabba);
+         --cimicwhite : linear-gradient(90deg, #dadada, #ffffff);
+         --cimicdblue : linear-gradient(90deg, #283f9c, #1f58ae);
+         --cimicblue : linear-gradient(90deg, #1f58ae, #1082cd);
+         --cimiclblue : linear-gradient(90deg, #1082cd, #0898df);
+         --uwacol : linear-gradient(90deg, #fff192, #ffd400);
+         --uwalcol : linear-gradient(90deg, #ffd400, #ffea61);
+		 --suggcol : linear-gradient(90deg, #E975A8, #726CF8);
+		 --spblue : linear-gradient(90deg, #106ebe, #106ebe);
+		 --tlorange : linear-gradient(90deg, #fda766, #fd7f2c);
+		 --percipblu : linear-gradient(90deg, #164794, #164794);
+         }
+         html,body{
+         width: 100%; 
+         height: 100%;
+         background-image: linear-gradient(90deg, #414850, #131720);
+         color: var(--text-color);
+         padding-top: 5px;
+         text-shadow: 1px 1px black;
+         }
+         body{
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         }
+		  h4{
+         font-size: 24px;
+         font-weight: 500;
+         }
+         .wrapper{
+         width:350px;
+         border-radius: 20px;
+         background-image: var(--bg-shape-color);
+         overflow: hidden;
+		 z-index: 1;
+		 position: relative;
+         }
+         .overviewInfo, .productSpecifications {
+         padding: 24px;
+         }
+         .actions{
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 32px;
+         }
+         .productinfo {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         position: relative;
+         min-height: 200px;
+         margin-bottom: 20px;
+         }
+         .productImage {
+         position: absolute;
+         left: 140px;
+         width: 150px;
+         height: auto;
+         // animation: updowncontroller infinite 3s alternate;
+         img{ width: 100%; height: auto}
+         transition: ease 2s all ;
+         &:hover{
+         transition: ease 2s all ;
+         animation: none;
+         transform: rotate(-20deg);
+         }
+         }
+		 
+		 
+		 
+		 .fixedbutton {
+	     position: fixed;
+         top: 30px;
+         right: 20px; 
+		 cursor: pointer;
+		 transition: transform 0.1s ease;
+		 }
+		 @keyframes jiggle {
+		 0% { transform: translate(0); }
+		 25% { transform: translate(-5px, 0); }
+		 50% { transform: translate(5px, 0); }
+		 75% { transform: translate(-5px, 0); }
+		 100% { transform: translate(0); }
+		 }
+		 .fixedbutton:hover {
+		 animation: jiggle 0.5s ease; /* Duration of the jiggling effect */
+		 }
+         h1{
+         font-family: 'Rubik', sans-serif;
+         }
+         h2{
+         font-family: 'Rubik', sans-serif;
+         text-align: center;
+         padding-bottom: 20px;
+         font-size: 30px;
+         }
+         .grouptext{
+         h3 {
+         letter-spacing: 3.2px;
+         font-size: 14px;
+         font-weight: 500;
+         margin-bottom: 8px;
+         }
+		 
+		 
+         p {
+         font-size: 12px;
+         opacity: 0.8;
+         } 
+         }
+         .cimictext{
+         h3 {
+         letter-spacing: 3.2px;
+         font-size: 14px;
+         font-weight: 500;
+         margin-bottom: 8px;
+         color:black;
+         text-shadow: none;
+         }
+         p {
+         font-size: 12px;
+         opacity: 0.8;
+         color:black;
+         text-shadow: none;
+         } 
+         }
+		 
+         .bottomContainer { 
+		 width: 100%; /* Adjust as needed */
+		 height: 140px; /* Adjust to fit 8 rows */
+		 position: relative;
+		 }
+  
+         button.usefulButton {
+         outline: 0;
+         border: 0;
+         border-radius: 6px;
+         display: flex;
+         align-items: center;
+         overflow: hidden;
+         color: white;
+         margin: 5px;   
+         height: 50px;
+         width: 100%;
+         justify-content: space-between;
+         }
+         .usefulButton p {
+         padding: 8px 8px;
+         border-right: 1px solid rgba(0,0,0,0.4);
+         width: 100%;
+         text-shadow: 1px 1px black;
+         }
+         .useful-links, .hidden-links {
+         transition: opacity 3s ease-in-out;
+         position: absolute;
+         width: 100%; /* Ensure both take the same width */
+         text-align: center; /* Center text (optional) */
+         }
+         .hidden-links {
+         opacity: 0;
+         visibility: hidden; /* Initially hidden */
+         }
+         .bottomContainer:hover .useful-links {
+         opacity: 0;
+         visibility: hidden; /* Hide useful links on hover */
+         }
+         .bottomContainer:hover .hidden-links {
+         opacity: 1;
+         visibility: visible; /* Show hidden links on hover */
+         }
+         .useful-links, .hidden-links {
+         opacity: 1;
+         visibility: visible; /* Default to visible */
+         }
+         /* product specifications */
+         .productSpecifications{
+         h1{
+         margin-top: 10px; 
+         margin-bottom: 16px;
+         font-size: 32px;
+         }
+         p {
+         opacity: 0.8;
+         font-size: 15px;
+         line-height: 1.5;
+         text-shadow: 1px 1px black;
+         }
+         .productFeatures {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         margin-top: 20px; 
+         grid-row-gap: 16px;
+         .feature{ display:flex;}
+         }
+         }
+         .checkoutButton {
+         display: flex;
+         width: 100%;
+         background-image: var(--bg-shape-color);
+         border-radius: 12px;
+         overflow: hidden;
+         box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 3px 0px rgba(12, 12, 12, 0.3), inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
+         margin-top: 30px;
+         padding: 14px;
+         justify-content: space-between;
+         align-items: center;
+         }
+         .serviceNowTag {
+         display: flex;
+         align-items: center;
+         font-size: 24px;
+         }
+         .serviceNowTag span {
+         color: #F94449;
+         font-size: 24px;
+         }
+        
+         button.preorder {
+         outline: 0;
+         border: 0;
+         border-radius: 6px;
+         display: flex;
+         align-items: center;
+         overflow: hidden;
+         color: white;
+         margin: 5px;  
+		min-width: 130px;
+         }
+         .preorder p {
+         padding: 8px 8px;
+         border-right: 1px solid rgba(0,0,0,0.4);
+         width: 100%;
+         }
+         .buttonaction {
+         border-left: 1px solid rgba(255,255,255,.2);
+         padding: 5px 5px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: rgba(255,255,255,0.7);
+         }
+         /* animation */
+         @keyframes updowncontroller{
+         0%  {
+         transform: rotate(-90deg) translate(-56px, 66px);}
+         80%, 100%{
+         transform: rotate(-70deg) translate( 10px, 66px);}
+         }
+		 
+         .container{
+         max-width: 1200px;
+         width: 100%;
+         overflow: hidden;
+         }
+         .container .main-card{
+         display: flex;
+         justify-content: space-evenly;
+         width: 200%;
+         transition: 1s;
+         }
+         #two:checked ~ .main-card{
+         margin-left: -%;
+		 
+         }
+         .container .main-card .cards{
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;   
+		margin-left: 50px;		 
+         }
+         .main-card .cards .card {
+         width: calc(33.33% - 20px); /* Adjust width for larger screens */
+         margin-bottom: 20px; /* Add margin to the bottom for spacing */
+         transition: all 0.4s ease;
+		 z-index:2;
+         }
+         .main-card .cards .card:hover{
+         transform: translateY(-15px);
+         }
+		 
+         .bottomMenu {
+         transition: all 0.3s ease; /* Shorten the transition for better responsiveness */
+         width: 100%;
+         height: 100%;
+         opacity: 0; /* Start with opacity 0 */
+         transform: translateY(15px); /* Start slightly down */
+         display:grid;
+		  grid-template-columns: repeat(8, 1fr); /* 8 columns */
+		grid-template-rows: repeat(2, 1fr); /* 2 rows */
+		gap: 10px; /* Optional: adds space between grid items */
+         justify-content: space-between;
+		 padding:10px;
+         }
+         .bottomMenu:hover {
+         opacity: 1; /* Fully visible when hovered */
+         transform: translateY(0); /* Move to original position on hover */
+         }
+        
+        
+         @media (max-width: 768px) {
+         .main-card .cards .card {
+         width: calc(50% - 10px); /* Adjust width for medium screens */
+         }
+         }
+         @media (max-width: 480px) {
+         .main-card .cards .card {
+         width: 100%; /* Make cards full width on small screens */
+         }
+         }
+         .container .button{
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         margin: 20px;
+         }
+         .button label{
+         height: 15px;
+         width: 15px;
+         border-radius: 20px;
+         background: #fff;
+         margin: 0 4px;
+         cursor: pointer;
+         transition: all 0.5s ease;
+         }
+         .button label.active{
+         width: 35px;
+         }
+         #one:checked ~ .button .one{
+         width: 35px;
+         }
+         #one:checked ~ .button .two{
+         width: 15px;
+         }
+         #two:checked ~ .button .one{
+         width: 15px;
+         }
+         #two:checked ~ .button .two{
+         width: 35px;
+         }
+         input[type="radio"]{
+         display: none;
+         }
+		
+        .copy-text {
+            cursor: pointer;
+        }
+		
+		.CDimage {
+			position: absolute;
+			bottom: -1px; /* Adjust this value based on your layout */
+			width: 60px;
+			height: 60px;
+			left: 20%; /* Center it horizontally */
+			transform: translate(-50%, 0); /* Adjust to center based on width */
+			background-image: url('https://www.svgrepo.com/show/396057/computer-disk.svg'); /* Replace with your image URL */
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 0; /* Set to 0 to place it behind */
+			transition: transform 0.5s ease;
+		}
+		.card:hover .CDimage {
+			transform: translate(-50%, 50px);
+		}
+		.card {
+			position: relative; /* Keep card position relative for absolute positioning of CDimage */			
+		}
+		
+		.Mineimage {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 50px;
+		transform: translate(-50%, 0); /* Adjust to center based on width */
+		background-image: url('https://www.svgrepo.com/show/398056/pick.svg'); /* Replace with your image URL */
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 0; /* Set to 0 to place it behind */
+		transition: visibility 0.5s, opacity 0.5s ease; /* Transition for opacity and transform */
+		opacity: 0; /* Start with opacity 0 */
+		visibility: hidden; /* Initially hidden */
+		}
+
+/* Optional: Add keyframes for a subtle back-and-forth rotation */
+@keyframes rotate {
+    0% { transform: translate(-50%, 0px) rotate(-75deg); }
+    50% { transform: translate(-50%, 0px) rotate(10deg); }
+    100% { transform: translate(-50%, 0px) rotate(-75deg); }
+}
+
+.card:hover .Mineimage {
+    animation: rotate 1s infinite; /* Apply rotation animation on hover */
+	opacity:100%;
+	visibility: visible;
+}
+
+.card .Mineimage {
+    transition: transform 0.5s ease-out, opacity 0.5s ease; /* Reset to original state smoothly */
+}
+.Truckimage {
+			position: absolute;
+		/* Adjust this value based on your layout */
+			width: 435px;
+			height: 100%;	
+			bottom: -5px;
+			left: -5px;
+			transform: translate(-50%, 0); /* Adjust to center based on width */
+			background-image: url('https://i.imgur.com/g4PrM4d.png'); /* Replace with your image URL */
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			z-index: 0; /* Set to 0 to place it behind */
+			transition: transform 0.5s ease;
+			transform: scaleX(-1);
+			opacity: 0%;
+			visibility: hidden;
+		}
+.card:hover .Truckimage {
+    animation: moveAndFade 1.5s forwards; /* Trigger animation on hover */
+	visibility: visible;
+}
+
+@keyframes moveAndFade {
+    0% {
+        transform: translateY(0) scaleX(-1); /* Start position */
+        opacity: 0; /* Fully visible */
+    }
+    30% {
+        transform: translateY(50px) scaleX(-1); /* Move down */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translate(400px, 50px) scaleX(-1); /* Move down and to the right */
+        opacity: 0; /* Fade out */
+    }
+}
+.Craneimage {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 450px;
+    transform: translate(-50%, 0); /* Adjust to center based on width */
+    background-image: url('https://www.svgrepo.com/show/400308/hammer.svg'); /* Replace with your image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0; /* Set to 0 to place it behind */
+    transition: visibility 0.5s, opacity 0.5s ease; /* Transition for opacity and transform */
+    opacity: 0; /* Start with opacity 0 */
+    visibility: hidden; /* Initially hidden */
+}
+
+/* Optional: Add keyframes for a subtle back-and-forth rotation */
+@keyframes rotate {
+    0% { transform: translate(-50%, 0px) rotate(-75deg); }
+    50% { transform: translate(-50%, 0px) rotate(10deg); }
+    100% { transform: translate(-50%, 0px) rotate(-75deg); }
+}
+
+.card:hover .Craneimage {
+    animation: rotate 1s infinite; /* Apply rotation animation on hover */
+    opacity: 1; /* Make visible on hover */
+    visibility: visible; /* Ensure it is visible */
+}
+
+.card .Craneimage {
+     transition: transform 0.5s ease-out, opacity 0.5s ease; /* Reset to original state smoothly */
+}
+
+.throwing-image {
+			position: absolute;
+            width: 20%; /* Adjust the size as needed */         
+			background-image: url('https://www.svgrepo.com/show/401870/graduation-cap.svg');
+			z-index: 2; /* Set to 0 to place it behind */
+			transition: transform 1s ease;
+			opacity: 100%;
+			top: 60px;
+			right:50px;
+        }
+
+        @keyframes throw {
+               0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(0) translateY(-200px) rotate(360deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(720deg);
+    }
+        }
+	
+		
+		.card:hover .throwing-image {
+			animation: throw 2s infinite; /* Apply rotation animation on hover */
+			opacity:100%;
+		}
+		
+		.traffic-image {
+			position: absolute;
+            width: 35%; /* Adjust the size as needed */         
+			background-image: url('https://www.svgrepo.com/show/401870/graduation-cap.svg');
+			z-index: 2; /* Set to 0 to place it behind */
+			transition: transform 1s ease;
+			opacity: 0%;
+			top: 180px;
+			right:10px;
+			visibility: hidden;
+        }
+
+        @keyframes traffic {
+               0% {
+        transform: translateX(0) translateY(0);
+		opacity:0;
+    }
+    100% {
+        transform: translateX(0) translateY(-20px);
+		opacity:1;
+    }
+        }
+		
+		.card:hover .traffic-image {
+			animation: traffic 2s forwards; /* Apply rotation animation on hover */
+			animation-iteration-count: 1;
+			opacity:100%;
+			visibility: visible;
+		}
+		
+		.animation-container{
+		overflow:hidden;
+		}
+		
+		.arrow-button {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+			border-radius: 50%;
+			border: none;
+			height: 50px;
+			width: 50px;
+            font-size: 24px;
+			margin: 50px;
+        }
+		
+		.navContainer {
+		width:100%;
+		justify-content: center;
+         align-items: center;  
+		 display: flex;
+		}
+		
+	
+        .hidden { display: none; }
+		
+        .switch {
+  position: absolute;
+  top:30px;
+  left:30px;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 14px;
+  pointer-events: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+
+.switch2 {
+  position: absolute;
+  bottom:30px;
+  right:30px;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.switch2 > span {
+  position: absolute;
+  top: 14px;
+  pointer-events: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+
+.switch2 > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: darkgray;
+  top: 35%;
+}
+
+.switch2 > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+    top: 35%;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: darkgray;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: darkgray;
+  top: 12px;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+    top: 10px;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 35px;
+  background-color: darkgray;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: darkgray;
+  -webkit-
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #fff;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label {
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 41px;
+}
+
+table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px; /* Space below each table */
+        }
+        th, td {    
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+   
+        }
+        /* Video card styling */
+         .videoCard {
+            width: 100%; /* Full width of the table cell */
+            border-radius: 15px;
+            overflow: hidden;
+			background-image: var(--bg-shape-color);
+			
+        }
+        .video-container {
+            width: 100%;
+            height: 40%;
+        }
+        video, iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .description {
+            padding: 15px;
+        }
+        .footer {
+            padding: 15px;
+            border-top: 1px solid #595959;
+        }
+        h2, h3 {
+            margin: 0;
+        }
+        enlargeButton {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        enlargeButton:hover {
+            background-color: #0056b3;
+        }
+		
+		.parentContainer {
+overflow: auto;
+height: 88vh; /* Optional: to set a fixed height */
+margin-top: 99px;
+}
+.parentContainer::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+		
+.trainingContainer {
+    text-align: center;
+}
+
+.enlargeButton{
+background-color: transparent; /* Transparent fill */
+    color: white;                 /* Solid white text */
+    border: 2px solid white;      /* Solid white border */
+    border-radius: 10px;          /* Rounded corners */
+    padding: 5px 5px;           /* Padding for height and width */
+	margin-top: 10px;
+    font-size: 10px;              /* Text size */
+    cursor: pointer;              /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; }
+
+.lvlup {
+  position: fixed; /* Fix the position of the image */
+  top: 12px;
+  width: 5%; /* Keep the image size */
+  z-index: 10; /* Ensure the image is above other elements */
+  left: 50%; /* Position the left edge of the image at the center of the viewport */
+  transform: translateX(-50%); /* Shift the image left by half of its width to center it */
+}
+
+.overlay {
+ position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    z-index: 999; /* Below the video */
+}
+
+.exit-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Above the overlay */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+	   .loadingScreen {
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            height: 110vh;
+            background: linear-gradient(120deg, #343A4F, #0F1620);
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+        }
+
+        .loadingScreen h5 {
+            color: white; /* Change text color if necessary */
+            font-size: 36px; /* Adjust font size as needed */
+        }		
+		
+		.open-button:hover {
+		 animation: jiggle 0.5s ease; /* Duration of the jiggling effect */
+		 }
+
+.dexoverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 899;
+}
+		.dropdown-menu {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 30px 10px 15px;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+        }
+
+        .dropdown-menu:hover {
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .dropdown-menu:focus {
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+
+        .dropdown-menu option {
+            background-color: white;
+            color: #333;
+            padding: 10px;
+        }
+
+        .pokedex {
+            height: 500px;
+            position: absolute;
+        }
+		
+		#pokedex-container {
+    display: none;
+    z-index: 900;
+	text-shadow: none;
+}
+
+        .pokedex img {
+            height: 450px;
+            cursor: pointer;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            z-index: 0;
+        }
+
+        .open-shift {
+            transform: translateX(139px);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 120px;
+            right: -165px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .pokedex-content {
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            left: 188px;
+            gap: 75px;
+        }
+
+        .result-box {
+    width: 202px;
+    height: 212px;
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;    
+    z-index: 1;
+    display: none;
+    overflow-y: auto;
+    margin-right: 20px;
+    transform: translateY(36px);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+        .result-text {
+            position: relative;
+            z-index: 2;
+             background-color: rgba(44, 62, 80, 0.7);
+            padding: 5px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .priority-matrix {
+            width: 200px;           
+            color: #ecf0f1;
+            padding: 10px;
+            border-radius: 3px;
+            display: none;
+        }
+
+         .dextable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dextable th, .dextable td {
+    padding: 12px;
+    text-align: center;
+}
+
+        .hidden {
+            display: none;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 5px;
+        }
+
+        .radio-button {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid black;
+            vertical-align: middle;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: inherit;
+            font-weight: 200;
+            color: black;
+            width: 50px;
+            height: 30px;
+            text-transform: uppercase;
+            border-radius: 0.75em;
+            transform-style: preserve-3d;
+            transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+            transform: translateY(-0.75em);
+            padding: 10px 2px 10px 2px;
+        }
+
+        .radio-button::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            border-radius: inherit;
+            box-shadow: 0 0 0 1px black;
+            transform: translate3d(0, 0.75em, -1em);
+            transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+        }
+
+        .radio-button:hover {
+            transform: translateY(-0.5em);
+        }
+
+        .radio-button:hover::before {
+            transform: translate3d(0, 0.5em, -1em);
+        }
+
+        .radio-button:active {
+            transform: translateY(0);
+        }
+
+        .radio-button:active::before {
+            transform: translate3d(0, 0, -1em);
+            box-shadow: 0 0 0 1px black;
+        }
+
+        .radio-button.pressed {
+            transform: translateY(0);
+        }
+
+        .radio-button.pressed::before {
+            transform: translate3d(0, 0, -1em);
+            box-shadow: 0 0 0 1px black;
+        }
+
+        input[type="radio"][value="Critical"] + .radio-button {
+            background: #e74c3c;
+        }
+
+        input[type="radio"][value="Critical"] + .radio-button::before {
+            background: #c0392b;
+        }
+
+        input[type="radio"][value="Critical"]:checked + .radio-button,
+        input[type="radio"][value="Critical"] + .radio-button.pressed {
+            background: #c0392b;
+        }
+
+        input[type="radio"][value="High"] + .radio-button {
+            background: #f1c40f;
+        }
+
+        input[type="radio"][value="High"] + .radio-button::before {
+            background: #d4ac0d;
+        }
+
+        input[type="radio"][value="High"]:checked + .radio-button,
+        input[type="radio"][value="High"] + .radio-button.pressed {
+            background: #f39c12;
+        }
+
+        input[type="radio"][value="Medium"] + .radio-button {
+            background: #2ecc71;
+        }
+
+        input[type="radio"][value="Medium"] + .radio-button::before {
+            background: #27ae60;
+        }
+
+        input[type="radio"][value="Medium"]:checked + .radio-button,
+        input[type="radio"][value="Medium"] + .radio-button.pressed {
+            background: #27ae60;
+        }
+
+        input[type="radio"][value="Low"] + .radio-button {
+            background: #3498db;
+        }
+
+        input[type="radio"][value="Low"] + .radio-button::before {
+            background: #2980b9;
+        }
+
+        input[type="radio "][value="Low"]:checked + .radio-button,
+        input[type="radio"][value="Low"] + .radio-button.pressed {
+            background: #2980b9;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+		
+		.open-button {
+    position: fixed;
+    top: 130px;
+    right: 104px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 997;
+}
+
+.open-button img {
+    width: 118px;
+}		
+
+#buttonTooltip {
+    position: fixed;
+    background-color: #000000; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 10px 12px; /* Slightly more padding */
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    z-index: 9999;
+    display: none;
+    pointer-events: none;
+    max-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333333; /* Subtle border */
+    backdrop-filter: blur(5px);
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+}
+      </style>
+   </head>
+   <body>
+   <div id="dexoverlay" class="dexoverlay"></div>
+
+<button id="open-button" class="open-button">
+    <img src="https://i.imgur.com/BeAbbF8.png" alt="Open Pokedex">
+</button>
+<div id="buttonTooltip" style="display: none; position: absolute; padding: 5px;"></div>
+    <div id="pokedex-container" class="pokedex">
+        <img id="closed-pokedex" src="https://maurowernly.github.io/pokedex-animation/img/closed-pokedex.svg" alt="Closed Pokedex">
+        <img id="open-pokedex" src="https://maurowernly.github.io/pokedex-animation/img/open-pokedex.svg" alt="Open Pokedex" style="display: none;">
+        <button id="close-button" class="close-button">X</button>
+        <div class="pokedex-content">
+            <div id="result-box" class="result-box">
+                <div class="result-text">Priority Result will be displayed here.</div>
+            </div>
+            <div id="priority-matrix" class="priority-matrix">
+                <table style="width:100%" class='dextable'>
+                    <tr>
+                        <td>
+                            <select class="dropdown-menu" id="clientDropdown" onchange="updateUrgencyOptions()">
+                                <option value="AUSX">AUSX</option>
+                                <option value="AEC">AEC</option>
+                                <option value="VDE">VDE</option>
+                                <option value="CBA">CBA</option>
+                                <option value="CPM">CPM</option>
+                                <option value="NHVR">NHVR</option>
+                                <option value="PlanIT">PlanIT</option>
+								<option value="NRI">NRI</option>
+								<option value="BUSY">BUSY</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Urgency</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="urgencyOptions" class="radio-group">
+                                <label id="criticalLabel" class="urgency-option">
+                                    <input type="radio" name="urgency" value="Critical" onclick="updatePriority()">
+                                    <span class="radio-button">Critical</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="urgency" value="High" onclick="updatePriority()">
+                                    <span class="radio-button">High</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="urgency" value="Medium" onclick="updatePriority()">
+                                    <span class="radio-button">Medium</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="urgency" value="Low" onclick="updatePriority()">
+                                    <span class="radio-button">Low</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Impact</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="impactOptions" class="radio-group">
+                                <label id="criticalUrgency" class="urgency-option">
+                                    <input type="radio" name="impact" value="Critical" onclick="updatePriority()">
+                                    <span class="radio-button">Critical</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="impact" value="High" onclick="updatePriority()">
+                                    <span class="radio-button">High</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="impact" value="Medium" onclick="updatePriority()">
+                                    <span class="radio-button">Medium</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="impact" value="Low" onclick="updatePriority()">
+                                    <span class="radio-button">Low</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+  <div class="loadingScreen">
+    <!-- My content is the word "soundscape" but the o is replaced with a disc -->
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/275fa415-a513-4b1e-b1c7-f795e3983b62/dcothoj-25d9d08c-fb55-40f0-a463-c2b7c1c1ce81.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI3NWZhNDE1LWE1MTMtNGIxZS1iMWM3LWY3OTVlMzk4M2I2MlwvZGNvdGhvai0yNWQ5ZDA4Yy1mYjU1LTQwZjAtYTQ2My1jMmI3YzFjMWNlODEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.8lIw6wktIPNIRTWrpUmb-EKUd1-s8w6Hh95SeHVqyY8" style="width:15%"/>
+ <h5 style="font-family: 'Pixelify Sans', sans-serif;">LOADING</h5>
+</div>
+   <a class="fixedbutton" href="https://asggroupcloud.sharepoint.com/:w:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7B0DCFE6E8-2944-4B03-BFB4-706699402378%7D&file=After%20Hours%20Emergency%20Procedures.docx&action=default&mobileredirect=true" target="_blank"><img src="https://i.imgur.com/YU7lHTp.png" title="Emergency Evacuation"style="width: 150px"></a>
+  
+    <div class="switch">
+	    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+	    <label for="language-toggle"></label>
+        <span class="on">En</span>
+        <span class="off">中文</span>
+    </div>
+  <div class="switch2">
+    <input type="checkbox" class="check-toggle check-toggle-round-flat" id="visibility-toggle">
+    <label for="visibility-toggle"></label>
+        <span class="on">Hub</span>
+        <span class="off">LVL UP</span>  
+</div>
+  
+  <div class="navContainer">
+    <button class="arrow-button" id="prevButton"><</button>
+      <div class="container">
+      <h2 data-type="en">ServiceDesk Hub</h2>
+	  <h2 data-type="zh" style="font-size: 26px">求助台集線器</h2>
+      <input type="radio" name="dot" id="one">
+      <input type="radio" name="dot" id="two">
+      <div class="main-card" style="z-index: 0">
+         <div class="cards">
+            <div class="card" data-type="en">
+			<div class="Mineimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--bourbon)";>
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>COVERAGE</h3>
+                           <p>24/7</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD NUMBER</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('1800 314 611')" title="1800 314 611" >1800 314 611</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD E-MAIL</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('ServiceDesk@citicpacificmining.com')">ServiceDesk@citicpacificmining.com</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://cdn.freebiesupply.com/logos/large/2x/citic-pacific-logo-png-transparent.png" alt="cpmLogo">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> CPM </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--cherry)" title="+61 3 9674 3341">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3341')" title="Click to copy: +61 3 9674 3341">On-call</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/now/nav/ui/classic/params/target/kb_view.do%3Fsysparm_article%3DKB0010264%26sysparm_rank%3D5%26sysparm_tsqueryId%3D0c6976ca9378d2103048b5058aba10d3" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--bourbon)">
+                           <p>Environment</p>
+                           <div class="buttonaction">
+                              <a href="https://gateway.citicpacificmining.com/logon/LogonPoint/tmindex.html" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cherry)">
+                           <p>Self-Service</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/sp" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--bourbon)">
+                           <p>Knowledge</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/now/nav/ui/classic/params/target/%24knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span>Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--virgin)">
+                           <p>Dashboard</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+            <div class="card" data-type="zh">
+			<div class="Mineimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--bourbon)";>
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>覆盖率</h3>
+                           <p>24/7</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电话号码</h3>
+                           <p title="点击复制" class="copy-text" onclick="copyToClipboard('1800 314 611')" title="1800 314 611" >1800 314 611</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电邮</h3>
+                           <p title="点击复制" class="copy-text" onclick="copyToClipboard('ServiceDesk@citicpacificmining.com')">ServiceDesk@citicpacificmining.com</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://cdn.freebiesupply.com/logos/large/2x/citic-pacific-logo-png-transparent.png" alt="cpmLogo">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1 style="font-size: 28px"> 中信澳矿 </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--cherry)" title="+61 3 9674 3341">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3341')" title="点击复制: +61 3 9674 3341">值班服务员</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/now/nav/ui/classic/params/target/kb_view.do%3Fsysparm_article%3DKB0010264%26sysparm_rank%3D5%26sysparm_tsqueryId%3D0c6976ca9378d2103048b5058aba10d3" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--bourbon)">
+                           <p>環境</p>
+                           <div class="buttonaction">
+                              <a href="https://gateway.citicpacificmining.com/logon/LogonPoint/tmindex.html" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cherry)">
+                           <p>自助服务</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/sp" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--bourbon)">
+                           <p>知识库</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/now/nav/ui/classic/params/target/%24knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span>Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--virgin)">
+                           <p>仪表盘</p>
+                           <div class="buttonaction">
+                              <a href="https://cpmau.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+            <div class="card" data-type="en">
+			<div class="CDimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--sblue)";>
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>COVERAGE</h3>
+                           <p>24/7</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD NUMBER</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('1300 136 576')">1300 136 576</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD E-MAIL</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('ASG.Servicedesk@asggroup.com.au')">ASG.Servicedesk@asggroup.com.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://lh3.googleusercontent.com/p/AF1QipM6BXi3BDQq9yI4fMkTGNneDV6ih8mRIVGLJU9x=s680-w680-h510" alt="nri">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> NRI </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--sblue)" title="+61 3 9674 3340">
+                           <p title="Click to Copy: +61 3 9674 3340" class="copy-text" onclick="copyToClipboard('+61 3 9674 3340')">On-call</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3Df030657bc39a46106851de2a0501312c" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--socialive)" title="AEC &#010; AUSX &#010; BAI &#010; BUSY &#010; CBA &#010; CDC &#010; DJCS &#010; MHCO &#010; NCVE &#010; PLAN &#010; QBE &#010; QMRO &#010; TRA &#010; VDE &#010; BT">
+                           <p>NRI Clients</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D6a23889783360a1037964a447daad311" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--sblue)">
+                           <p>Self-Service</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/customersp" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--socialive)">
+                           <p>Knowledge</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/%24knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color:lightblue">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--frost)">
+                           <p>Dashboard</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/home.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+			<div class="card" data-type="zh">
+			<div class="CDimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--sblue)";>
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>覆盖率</h3>
+                           <p>24/7</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电话号码</h3>
+                           <p title="点击复制" class="copy-text" onclick="copyToClipboard('1300 136 576')">1300 136 576</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电邮</h3>
+                           <p title="点击复制" class="copy-text" onclick="copyToClipboard('ASG.Servicedesk@asggroup.com.au')">ASG.Servicedesk@asggroup.com.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://lh3.googleusercontent.com/p/AF1QipM6BXi3BDQq9yI4fMkTGNneDV6ih8mRIVGLJU9x=s680-w680-h510" alt="nri">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1 style="font-size: 28px">野村</h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--sblue)" title="+61 3 9674 3340">
+                           <p title="点击复制: +61 3 9674 3340" class="copy-text" onclick="copyToClipboard('+61 3 9674 3340')">值班服务员</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3Df030657bc39a46106851de2a0501312c" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--socialive)" title="AEC &#010; AUSX &#010; BAI &#010; BUSY &#010; CBA &#010; CDC &#010; DJCS &#010; MHCO &#010; NCVE &#010; PLAN &#010; QBE &#010; QMRO &#010; TRA &#010; VDE &#010; BT">
+                           <p>野村 客户</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D6a23889783360a1037964a447daad311" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--sblue)">
+                           <p>自助服务</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/customersp" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--socialive)">
+                           <p>知识库</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/%24knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color:lightblue">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--frost)">
+                           <p>仪表盘</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/home.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+            <div class="card" data-type="en">
+		
+			<div class="Truckimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--grayvy)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>COVERAGE</h3>
+                           <p>24/7</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD NUMBER</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('1300 041 039')">1300 041 039</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD E-MAIL</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('nhvr.servicedesk@nhvr.gov.au')">IT.servicedesk@nhvr.gov.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://www.nhvr.gov.au/files/NHVR-logo.png" alt="NHVR" style="padding-top: 40px" >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> NHVR </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--grayvy)" title="MIM Leverage Hotline +61 3 9674 3358 Opt 9">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3358')" title="Click to Copy: +61 3 9674 3358" class="copy-text" onclick="copyToClipboard(this.title)">On-call</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/kb_view.do?sys_kb_id=71ed0341db700290c3380aa1f39619ae&sysparm_rank=1&sysparm_tsqueryId=b1f7696693f4d6102a82b33b6aba102c" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--graybo)" title="Use this VDI Remote Support &#010;For AD: Remote Desktop Connection 10.60.246.142">
+                           <p>Environment</p>
+                           <div class="buttonaction">
+                              <a href="https://connect.nhvr.gov.au/portal/webclient/index.html#/desktop" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--grayvy)">
+                           <p>Self-Service</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/sp?sysparm_stack=no" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--graybo)">
+                           <p>Knowledge</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/nav_to.do?uri=%2F$knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color:gray">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--dgray)">
+                           <p>Dashboard</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/nav_to.do?uri=%2F$pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+			<div class="card" data-type="zh">
+			<div class="Truckimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--grayvy)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>覆盖率</h3>
+                           <p>24/7</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电话号码</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('1300 041 039')">1300 041 039</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电邮</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('nhvr.servicedesk@nhvr.gov.au')">IT.servicedesk@nhvr.gov.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://www.nhvr.gov.au/files/NHVR-logo.png" alt="NHVR" style="padding-top: 40px" >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> NHVR </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--grayvy)" title="MIM Leverage Hotline +61 3 9674 3358 Opt 9">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3358')" title="Click to Copy: +61 3 9674 3358" class="copy-text" onclick="copyToClipboard(this.title)">值班服务员</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/kb_view.do?sys_kb_id=71ed0341db700290c3380aa1f39619ae&sysparm_rank=1&sysparm_tsqueryId=b1f7696693f4d6102a82b33b6aba102c" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--graybo)" title="Use this VDI Remote Support &#010;For AD: Remote Desktop Connection 10.60.246.142">
+                           <p>環境</p>
+                           <div class="buttonaction">
+                              <a href="https://connect.nhvr.gov.au/portal/webclient/index.html#/desktop" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--grayvy)">
+                           <p>自助服务</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/sp?sysparm_stack=no" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--graybo)">
+                           <p>知识库</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/nav_to.do?uri=%2F$knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color:gray">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--dgray)">
+                           <p>仪表盘</p>
+                           <div class="buttonaction">
+                              <a href="https://nhvrprod.service-now.com/nav_to.do?uri=%2F$pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+		 </div>
+         <div class="cards">
+            <div class="card" data-type="en">
+			<div class="Craneimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image: var(--cimicwhite)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="cimictext">
+                           <h3>COVERAGE</h3>
+                           <p>24/7</p>
+                           <p>Alerts AH 17:00-08:00</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD NUMBER</h3>
+                           <p class="copy-text" onclick="copyToClipboard('1300 245 716')" title="Click to Copy">1300 245 716</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD E-MAIL</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('servicedesk@cimic.com.au')">servicedesk@cimic.com.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://edge.sitecorecloud.io/cimicgroupl634d-cimicxmcloud-production-16eb/media/project/cimic/group/logo/cimic-svg.svg?iar=0" alt="cimicLogo" style="padding-top: 60px">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> CIMIC </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--cimicblue)" title="+61 3 9674 3349">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3349')" title="Click to Copy: +61 3 9674 3349">On-call</p>
+                           <div class="buttonaction">
+                              <a href="https://asggroupcloud.sharepoint.com/:w:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7BF2E069CD-1804-4D78-99BF-7D358D243017%7D&file=CIM%20-%20Event%20Management.docx&action=default&mobileredirect=true" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cimiclblue)">
+                           <p>Website</p>
+                           <div class="buttonaction">
+                              <a href="https://www.cimic.com.au/" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cimicdblue)">
+                           <p>P1/P2s</p>
+                           <div class="buttonaction">
+                              <a href="https://cimic.service-now.com/incident_list.do?sysparm_query=active%3Dtrue%5Estate%3D1%5EpriorityIN1%2C2%5Eassignment_group.company%3D7709ac584ff962005a559dde0310c7f8%5Eassigned_toISEMPTY" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cimicblue)">
+                           <p>Knowledge</p>
+                           <div class="buttonaction">
+                              <a href="https://asggroupcloud.sharepoint.com/:w:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7BED75A079-BF6D-4A55-9053-94F587F2EDBC%7D&file=CIM%20-%20Accessing%20CIMIC%20Service%20Now.docx&action=default&mobileredirect=true" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color: #1f58ae">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--cimiclblue)">
+                           <p>Dashboard</p>
+                           <div class="buttonaction">
+                              <a href="https://cimic.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboard.do%3Fsysparm_dashboard%3Df713b2041b58ce10ab42edb7b04bcb56" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+			<div class="card" data-type="zh">
+			<div class="Craneimage"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image: var(--cimicwhite)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="cimictext">
+                           <h3>覆盖率</h3>
+                           <p>24/7</p>
+                           <p>Alerts AH 17:00-08:00</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD 电话号码</h3>
+                           <p class="copy-text" onclick="copyToClipboard('1300 245 716')" title="Click to Copy">1300 245 716</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD 电邮</h3>
+                           <p title="点击复制" class="copy-text" onclick="copyToClipboard('servicedesk@cimic.com.au')">servicedesk@cimic.com.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://edge.sitecorecloud.io/cimicgroupl634d-cimicxmcloud-production-16eb/media/project/cimic/group/logo/cimic-svg.svg?iar=0" alt="cimicLogo" style="padding-top: 60px">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> CIMIC </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--cimicblue)" title="+61 3 9674 3349">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3349')" title="点击复制: +61 3 9674 3349">值班服务员</p>
+                           <div class="buttonaction">
+                              <a href="https://asggroupcloud.sharepoint.com/:w:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7BF2E069CD-1804-4D78-99BF-7D358D243017%7D&file=CIM%20-%20Event%20Management.docx&action=default&mobileredirect=true" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cimiclblue)">
+                           <p>網站</p>
+                           <div class="buttonaction">
+                              <a href="https://www.cimic.com.au/" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cimicdblue)">
+                           <p>P1/P2s</p>
+                           <div class="buttonaction">
+                              <a href="https://cimic.service-now.com/incident_list.do?sysparm_query=active%3Dtrue%5Estate%3D1%5EpriorityIN1%2C2%5Eassignment_group.company%3D7709ac584ff962005a559dde0310c7f8%5Eassigned_toISEMPTY" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--cimicblue)">
+                           <p>知识库</p>
+                           <div class="buttonaction">
+                              <a href="https://asggroupcloud.sharepoint.com/:w:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7BED75A079-BF6D-4A55-9053-94F587F2EDBC%7D&file=CIM%20-%20Accessing%20CIMIC%20Service%20Now.docx&action=default&mobileredirect=true" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color: #1f58ae">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--cimiclblue)">
+                           <p>仪表盘</p>
+                           <div class="buttonaction">
+                              <a href="https://cimic.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboard.do%3Fsysparm_dashboard%3Df713b2041b58ce10ab42edb7b04bcb56" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+            <div class="card" data-type="en">
+			<div class="animation-container">
+        <img src="https://www.svgrepo.com/show/180303/traffic-light-business.svg" alt="Traffic Image" class="traffic-image"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--mrwaora)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>COVERAGE</h3>
+                           <p>24/7</p>
+                           <p>Alerts AH 19:00-07:00</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD NUMBER</h3>
+                           <p class="copy-text" onclick="copyToClipboard('1800 318 130')" title="Click to Copy" >1800 318 130</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD E-MAIL</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('it.servicedesk@mainroads.wa.gov.au')">it.servicedesk@mainroads.wa.gov.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://www.mainroads.wa.gov.au/49c224/contentassets/cdae6beda63d46168fadbdd2979bec24/mrwa-logo.svg" alt="mrwaLogo" style ="padding-top: 60px">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> MRWA </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--mrwateal)" title="+61 3 9674 3357">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3357')" title="Click to Copy: +61 3 9674 3357">On-call</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3Dce6e8a1c33289250084754b46d5c7bbf%26sysparm_rank%3D2%26sysparm_tsqueryId%3D48f3342233309610084754b46d5c7bc5" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--mrwacyan)">
+                           <p>Environment</p>
+                           <div class="buttonaction">
+                              <a href="https://client.wvd.microsoft.com/arm/webclient/index.html" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--mrwateal)">
+                           <p>Self-Service</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/sp" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--mrwacyan)">
+                           <p>Knowledge</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/now/nav/ui/classic/params/target/%24knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color: orange">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--mrwaora)">
+                           <p>Dashboard</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+			<div class="card" data-type="zh">
+			<div class="animation-container">
+        <img src="https://www.svgrepo.com/show/180303/traffic-light-business.svg" alt="Traffic Image" class="traffic-image"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--mrwaora)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="grouptext">
+                           <h3>覆盖率</h3>
+                           <p>24/7</p>
+                           <p>Alerts AH 19:00-07:00</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电话号码</h3>
+                           <p class="copy-text" onclick="copyToClipboard('1800 318 130')" title="Click to Copy" >1800 318 130</p>
+                        </div>
+                        <div class="grouptext">
+                           <h3>SD 电邮</h3>
+                           <p title="点击复制" class="copy-text" onclick="copyToClipboard('it.servicedesk@mainroads.wa.gov.au')">it.servicedesk@mainroads.wa.gov.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://www.mainroads.wa.gov.au/49c224/contentassets/cdae6beda63d46168fadbdd2979bec24/mrwa-logo.svg" alt="mrwaLogo" style ="padding-top: 60px">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> MRWA </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--mrwateal)" title="+61 3 9674 3357">
+                           <p class="copy-text" onclick="copyToClipboard('+61 3 9674 3357')" title="点击复制: +61 3 9674 3357">值班服务员</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3Dce6e8a1c33289250084754b46d5c7bbf%26sysparm_rank%3D2%26sysparm_tsqueryId%3D48f3342233309610084754b46d5c7bc5" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--mrwacyan)">
+                           <p>環境</p>
+                           <div class="buttonaction">
+                              <a href="https://client.wvd.microsoft.com/arm/webclient/index.html" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--mrwateal)">
+                           <p>自助服务</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/sp" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--mrwacyan)">
+                           <p>知识库</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/now/nav/ui/classic/params/target/%24knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color: orange">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--mrwaora)">
+                           <p>仪表盘</p>
+                           <div class="buttonaction">
+                              <a href="https://mrwa.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+            <div class="card" data-type="en">
+			<div class="animation-container">
+        <img src="https://www.svgrepo.com/show/401870/graduation-cap.svg" alt="Throwing Image" class="throwing-image"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--uwacol)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="cimictext">
+                           <h3>COVERAGE</h3>
+                           <p>24/7</p>
+                           <p>Alerts AH 17:00-08:00</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD NUMBER</h3>
+                           <p class="copy-text" onclick="copyToClipboard('1300 380 918')" title="Click to Copy" >1300 380 918</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD E-MAIL</h3>
+                           <p title="Click to Copy" class="copy-text" onclick="copyToClipboard('IT-servicedesk@uwa.edu.au')">IT-servicedesk@uwa.edu.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://www.uwa.edu.au/-/media/project/uwa/uwa/masterbrand/core-elements/logo-uwacrest-white.svg?iar=0&hash=46D621281C445E03A9C73644C924120C" alt="uwaLogo" style="padding-top: 60px">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1> UniWA </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--uwacol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500">On-Call</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D960e38e0934bc210ea64725e1dba10a8" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--uwalcol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500" >Side-Door</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com//side_door.do" >
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--uwacol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500">New INC</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com/nav_to.do?uri=%2Fincident.do%3Fsys_id%3D-1%26sysparm_query%3Dactive%3Dtrue%26sysparm_stack%3Dincident_list.do%3Fsysparm_query%3Dactive%3Dtrue" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--uwalcol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500">Knowledge</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com/nav_to.do?uri=%2F$knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color:yellow">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--frost)">
+                           <p>Dashboard</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com/nav_to.do?uri=%2F$pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+			<div class="card" data-type="zh">
+			<div class="animation-container">
+        <img src="https://www.svgrepo.com/show/401870/graduation-cap.svg" alt="Throwing Image" class="throwing-image"></div>
+               <div class="wrapper">
+                  <div class="overviewInfo" style="background-image:  var(--uwacol)">
+                     <div class="actions">
+                     </div>
+                     <div class="productinfo">
+                        <div class="cimictext">
+                           <h3>覆盖率</h3>
+                           <p>24/7</p>
+                           <p>Alerts AH 17:00-08:00</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD 电话号码</h3>
+                           <p class="copy-text" onclick="copyToClipboard('1300 380 918')" title="点击复制" >1300 380 918</p>
+                        </div>
+                        <div class="cimictext">
+                           <h3>SD 电邮</h3>
+                           <p title="点击复制" class="copy-text" onclick="copyToClipboard('IT-servicedesk@uwa.edu.au')">IT-servicedesk@uwa.edu.au</p>
+                        </div>
+                        <div class="productImage">
+                           <img src="https://www.uwa.edu.au/-/media/project/uwa/uwa/masterbrand/core-elements/logo-uwacrest-white.svg?iar=0&hash=46D621281C445E03A9C73644C924120C" alt="uwaLogo" style="padding-top: 60px">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- overview info -->
+                  <div class="productSpecifications">
+                     <h1 style="font-size:28px"> 西澳大学 </h1>
+                     <div class="productFeatures">
+                        <button class="preorder" style="background-image: var(--uwacol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500">新 INC</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com/nav_to.do?uri=%2Fincident.do%3Fsys_id%3D-1%26sysparm_query%3Dactive%3Dtrue%26sysparm_stack%3Dincident_list.do%3Fsysparm_query%3Dactive%3Dtrue" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--uwalcol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500" >侧门</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com//side_door.do" >
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--uwacol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500">SD 范围</p>
+                           <div class="buttonaction">
+                              <a href="https://support.nri-anz.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D960e38e0934bc210ea64725e1dba10a8" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                        <button class="preorder" style="background-image: var(--uwalcol)">
+                           <p style="color:black; text-shadow:none; font-weight: 500">知识库</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com/nav_to.do?uri=%2F$knowledge.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                     <div class="checkoutButton">
+                        <div class="serviceNowTag">
+                           <span style="color:yellow">Service</span>Now
+                        </div>
+                        <button class="preorder" style="background-image: var(--frost)">
+                           <p>仪表盘</p>
+                           <div class="buttonaction">
+                              <a href="https://uwa.service-now.com/nav_to.do?uri=%2F$pa_dashboard.do" target="_blank">
+                                 <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    >
+                                    <path
+                                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                                       fill="white"
+                                       />
+                                 </svg>
+                              </a>
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+                  <!-- product specificaiton -->
+               </div>
+               <!-- wrapper-->
+            </div>
+         </div>
+      </div>
+      <div class="button" style="z-index: 1">
+         <label for="one" class=" active one"></label>
+         <label for="two" class="two"></label>
+      </div>
+      <div class="bottomContainer" style="z-index: 1">
+         <div class="useful-links">
+            <h1 data-type="en">Useful Links</h1>
+			<h1 data-type="zh">有用超連結</h1>
+         </div>
+         <div class="hidden-links">
+            <div class="bottomMenu">
+               <button class="usefulButton" style="background-image: var(--asg)">
+                  <p>NRInsider</p>
+                  <div class="buttonaction">
+                     <a href="https://asggroupcloud.sharepoint.com/sites/intranet" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+               <button class="usefulButton" style="background-image: var(--secret); color: lightgreen">
+                  <p>Secret Server</p>
+                  <div class="buttonaction">
+                     <a href="https://dc1vthy001.asggroup.com.au/SecretServer/Login.aspx?ReturnUrl=%2fSecretServer%2fdashboard.aspx" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+               <button class="usefulButton" style="background-image: var(--oracle)">
+                  <p>Oracle</p>
+                  <div class="buttonaction">
+                     <a href="https://edtq.fa.ap1.oraclecloud.com/fscmUI/faces/FuseWelcome?_adf.ctrl-state=myaekhs9j_1&_adf.no-new-window-redirect=true&_afrLoop=11864464006251590&_afrWindowMode=2&_afrWindowId=null&_afrFS=16&_afrMT=screen&_afrMFW=1920&_afrMFH=919&_afrMFDW=1920&_afrMFDH=1080&_afrMFC=8&_afrMFCI=0&_afrMFM=0&_afrMFR=96&_afrMFG=0&_afrMFS=0&_afrMFO=0" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+               <button class="usefulButton" style="background-image: var(--asx);">
+                  <p>ASX</p>
+                  <div class="buttonaction">
+                     <a href="https://auth.asxonline.com/difam/XUI/?realm=/business&authIndexType=service&authIndexValue=Participants&goto=https://auth.asxonline.com:443/difam/oauth2/authorize?realm%3D%252Fbusiness%26service%3DParticipants%26response_type%3Dcode%26client_id%3Dsfdc-csam%26redirect_uri%3Dhttps%253A%252F%252Fservice.asxonline.com%252Fservices%252Fauthcallback%252FForgeRock%26scope%3Dopenid%2520profile%2520asx.com.au%252Fcsam%252Fadmin%253Aread%2520asx.com.au%252Fcsam%252Fadmin%253Awrite%26state%3DCAAAAZIM91jFMDAwMDAwMDAwMDAwMDAwAAAA-hb7gC-shNXeVAvDHQfV954TeK4y4rGPRJbOlCqheyq7CbEW0WH6FPjovGW-8oI3XS0FLWP8GoVW1T81IdwjQL6iN5I4q5TYYoYWCW1uVF41_Q-JXyfVHtFAH3qOVxSdE5AFHHO6-c8avOBGrzS_7YLAfYfMJNpF7iRWFJav_HceCVAB3wba3TcfFNtUQ6eFQp0aVXXhwXXRhEuwPeg68JjH-9ZBvyUxwAKgfSxXd2PuV_0cJnum8-zCisDHh76brQ%253D%253D#login/" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+               <button class="usefulButton" style="background-image: var(--gsu)">
+                  <p style="color:black; text-shadow:none; font-weight: 500">GSU</p>
+                  <div class="buttonaction">
+                     <a href="https://globalswitcha.service-now.com/" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"           
+                  />
+                        </svg>
+                     </a>
+                  </div>
+               </button><button class="usefulButton" style="background-image: var(--uwacol)">
+                  <p style="color:black; text-shadow:none; font-weight: 500">CBA ENV</p>
+                  <div class="buttonaction">
+                     <a href="https://remoteaccess-gsu-prod1.trading.cba/Citrix/GSU-CBA-PROD1Web/" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+               <button class="usefulButton" style="background-image: var(--cx)">
+                  <p>CXOne</p>
+                  <div class="buttonaction">                   
+                     <a href="https://myapps.microsoft.com/signin/4b50a370-68c1-463d-bb26-31a5c9a804a5?tenantId=f8b399f7-18b7-448f-ae4e-720e0347caf3" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+			   <button class="usefulButton" style="background-image: var(--excellg)">
+                  <p>AEC/TMR On-call</p>
+                  <div class="buttonaction">
+                     <a href="https://asggroupcloud.sharepoint.com/:x:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7B7D9A6E67-F02B-45D0-A0A2-9444925952A9%7D&file=AEC%2BTMR%20AMS%20On-Call%20Roster.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+               <button class="usefulButton" style="background-image: var(--excelg)">
+                  <p>Intune</p>
+                  <div class="buttonaction">
+                     <a href="https://asggroupcloud-my.sharepoint.com/:x:/g/personal/jack_douglas_asggroup_com_au/Eci6e7axaGhAk1ZXfm9g6akBfDYuRGLM9aS443Y4C7ZsyA?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1750300351646&web=1" target="_blank">
+                        <svg
+                           width="24"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           >
+                           <path
+                              d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>
+               </button>
+               <button class="usefulButton" style="background-image: var(--exceldg)">
+                  <p>Callback Tracker</p>
+                  <div class="buttonaction">
+                     <a href="https://asggroupcloud.sharepoint.com/:x:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7Bf37eb85b-6b24-4903-8bf8-d81fbf891d0b%7D&action=edit&wdenableroaming=1&wdlcid=en-US&wdorigin=ItemsView&wdhostclicktime=1732593953332&wdredirectionreason=Force_SingleStepBoot&wdinitialsession=9acad971-2628-fd6a-e294-292230ec803d&wdrldsc=2&wdrldc=1&wdrldr=ContinueInExcel&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&web=1" target="_blank">
+                     <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                     <path
+                     d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>      
+               </button>
+			   <button class="usefulButton" style="background-image: var(--dg)">
+                  <p>Roster</p>
+                  <div class="buttonaction">
+                     <a href="https://asggroupcloud.sharepoint.com/:x:/r/sites/AdelaideSD/_layouts/15/doc2.aspx?sourcedoc=%7B1E43747D-3F0D-4D90-A4C1-9487E8AD4640%7D&file=Roster%20-%20Staff%20View.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank">
+                     <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                     <path
+                     d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>      
+               </button>
+			   <button class="usefulButton" style="background-image: var(--suggcol)">
+                  <p>Suggestion Box</p>
+                  <div class="buttonaction">
+                     <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=95mz-LcYj0SuTnIOA0fK8zS1GAN7SNVHlz7ygBjSt-1UNVhNNFdOSDhMUThPUVhGWVpNWlFZMVFZWi4u" target="_blank">
+                     <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                     <path
+                     d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>      
+               </button>
+			   <button class="usefulButton" style="background-image: var(--spblue)">
+                  <p>SD 101</p>
+				  <div class="buttonaction">
+                     <a href="https://asggroupcloud.sharepoint.com/sites/AdelaideSD/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=6d9shn&OR=Teams%2DHL&CT=1728288619577&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA5MDEwMTQyMSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&CID=b2e3da26%2Dacbd%2D43ed%2D86fa%2D0b584fe9e425&FolderCTID=0x012000D878DD25DFF5AD4591353F080F19DF0A&id=%2Fsites%2FAdelaideSD%2FShared%20Documents%2FGeneral%2FBAU%20SD%20Operations%2FSD101%20%2D%20Operating%20Procedures" target="_blank">
+                     <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                     <path
+                     d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>      
+               </button>
+			   <button class="usefulButton" style="background-image: var(--tlorange)">
+                  <p>Handover</p>
+				  <div class="buttonaction">
+                     <a href="https://asggroupcloud.sharepoint.com/:x:/r/sites/AdelaideSD/_layouts/15/Doc.aspx?sourcedoc=%7B6CD4DCB4-4EE9-4EC1-9D08-20C7C557F227%7D&file=Handover%20Drafting.xlsx&nav=MTVfezRFNUJGRTI0LTQ4OEYtNEJERC04ODJELUJDRUFCNEY0RDI3OX0&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&action=default&mobileredirect=true" target="_blank">
+                     <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                     <path
+                     d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>      
+               </button>
+			   <button class="usefulButton" style="background-image: var(--spblue)">
+                  <p>BAU Cheat Sheets </p>
+				  <div class="buttonaction">
+                     <a href="https://asggroupcloud.sharepoint.com/sites/AdelaideSD/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=gfBZMl&CID=ed393429%2Ddaf1%2D401b%2Db665%2D1795f9052da2&FolderCTID=0x012000D878DD25DFF5AD4591353F080F19DF0A&id=%2Fsites%2FAdelaideSD%2FShared%20Documents%2FGeneral%2FBAU%20SD%20Operations%2FBAU%20Cheat%20sheets" target="_blank">
+                     <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                     <path
+                     d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                              fill="white"
+                              />
+                        </svg>
+                     </a>
+                  </div>      
+               </button>
+			   <button class="usefulButton" style="background-image: var(--percipblu)">
+                 <p>Percipio </p>
+			  <div class="buttonaction">
+                    <a href="https://nri.percipio.com/" target="_blank">
+                    <svg
+                       width="24"
+                       height="24"
+                       viewBox="0 0 24 24"
+                       >
+                    <path                     d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                             fill="white"
+                             />
+                       </svg>
+                    </a>
+                 </div>      
+              </button>
+            </div>  		   
+         </div>			
+      </div>	  
+	</div> 	  
+	<button class="arrow-button" id="nextButton">></button>
+</div>	
+<div class="parentContainer">
+
+<div class="trainingContainer hidden">
+    <img src="https://i.imgur.com/hPxXOY8.png" alt="Description of the image" style="max-width: 10%;" class="lvlup">
+    <table id="videos-table">
+        <tbody id="videos-tbody">
+            <!-- Table rows will be added here dynamically -->
+        </tbody>
+    </table>  
+	</div>
+	</div>
+   </body>
+</html>
+
+<script>
+// Function to update radio buttons
+function updateRadioButtons(pageNumber) {
+    const radioOne = document.getElementById('one');
+    const radioTwo = document.getElementById('two');
+    
+    if (pageNumber === 1) {
+        radioOne.checked = true;
+        radioTwo.checked = false;
+    } else {
+        radioOne.checked = false;
+        radioTwo.checked = true;
+    }
+}
+
+// Keep track of current page
+let currentPage = 1;
+
+// Function to handle page transitions
+function goToPage(pageNumber) {
+    const mainCard = document.querySelector('.main-card');
+    if (pageNumber === 1 && currentPage === 2) {
+        mainCard.style.marginLeft = '0%';
+        updateRadioButtons(1);
+        currentPage = 1;
+    } else if (pageNumber === 2 && currentPage === 1) {
+        mainCard.style.marginLeft = '-100%';
+        updateRadioButtons(2);
+        currentPage = 2;
+    }
+}
+
+// Radio button controls
+document.getElementById('one').addEventListener('change', () => {
+    goToPage(1);
+});
+
+document.getElementById('two').addEventListener('change', () => {
+    goToPage(2);
+});
+
+// Arrow button controls
+document.getElementById('prevButton').addEventListener('click', () => {
+    goToPage(1);
+});
+
+document.getElementById('nextButton').addEventListener('click', () => {
+    goToPage(2);
+});
+
+// Event listeners for keyboard arrows
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        goToPage(1);
+    } else if (e.key === 'ArrowRight') {
+        goToPage(2);
+    }
+});
+
+// Touch events
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    
+    if (touchStartX - touchEndX > 50) { // Swipe left
+        goToPage(2);
+    } else if (touchEndX - touchStartX > 50) { // Swipe right
+        goToPage(1);
+    }
+});
+
+var priorityData = {
+    "AUSX": {
+        "Critical": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "High": {"Critical": 1, "High": 2, "Medium": 3, "Low": 3},
+        "Medium": {"Critical": 2, "High": 3, "Medium": 3, "Low": 4},
+        "Low": {"Critical": 3, "High": 3, "Medium": 4, "Low": 4}
+    },
+    "AEC": {
+        "Critical": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "High": {"Critical": 1, "High": 2, "Medium": 3, "Low": 3},
+        "Medium": {"Critical": 2, "High": 2, "Medium": 3, "Low": 3},
+        "Low": {"Critical": 3, "High": 3, "Medium": 3, "Low": 3}
+    },
+    "VDE": {
+        "Critical": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "High": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "Medium": {"Critical": 2, "High": 2, "Medium": 3, "Low": 4},
+        "Low": {"Critical": 3, "High": 3, "Medium": 4, "Low": 4}
+    },
+    "CPM": {
+        "High": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "Medium": {"Critical": 1, "High": 2, "Medium": 3, "Low": 4},
+        "Low": {"Critical": 2, "High": 3, "Medium": 4, "Low": 4}
+    },
+    "PlanIT": {
+        "Critical": {"High": 1, "Medium": 2, "Low": 3},
+        "High": {"High": 1, "Medium": 2, "Low": 3},
+        "Medium": {"High": 2, "Medium": 3, "Low": 4},
+        "Low": {"High": 3, "Medium": 4, "Low": 4}
+    },
+    "CBA": {
+        "Critical": {"Critical": 1, "High": 1, "Medium": 2, "Low": 2},
+        "High": {"Critical": 1, "High": 2, "Medium": 3, "Low": 3},
+        "Medium": {"Critical": 2, "High": 3, "Medium": 4, "Low": 4},
+        "Low": {"Critical": 2, "High": 3, "Medium": 4, "Low": 4}
+    },
+    "NHVR": {
+        "Critical": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "High": {"Critical": 1, "High": 2, "Medium": 3, "Low": 3},
+        "Medium": {"Critical": 2, "High": 3, "Medium": 3, "Low": 4},
+        "Low": {"Critical": 3, "High": 3, "Medium": 4, "Low": 4}
+    },
+	"NRI": {
+        "Critical": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "High": {"Critical": 1, "High": 2, "Medium": 3, "Low": 3},
+        "Medium": {"Critical": 2, "High": 3, "Medium": 3, "Low": 4},
+        "Low": {"Critical": 3, "High": 3, "Medium": 4, "Low": 4}
+    },
+	"BUSY": {
+        "Critical": {"Critical": 1, "High": 1, "Medium": 2, "Low": 3},
+        "High": {"Critical": 1, "High": 2, "Medium": 3, "Low": 3},
+        "Medium": {"Critical": 2, "High": 3, "Medium": 3, "Low": 4},
+        "Low": {"Critical": 3, "High": 3, "Medium": 4, "Low": 4}
+    },
+};
+
+const priorityGifs = {
+    1: [
+        'https://i.imgur.com/Lquz7cq.gif',
+        'https://media.tenor.com/DSkgbFWzWhQAAAAM/moltres-pokemon.gif',
+        'https://media.tenor.com/xMoYbxpqJNgAAAAM/articuno-lightning.gif',
+        'https://media.tenor.com/ZlRBC2fwfTwAAAAC/mewtwo-destroy.gif'
+    ],
+    2: [ 'https://media.tenor.com/rLFfSIKDXGoAAAAM/yo-you-good-lmao-yeah-thanks.gif',
+        'https://media.tenor.com/23cMPonP3z4AAAAM/pokemon-charizard.gif',
+        'https://media.tenor.com/kjNV2Iq6soQAAAAM/mdbdkennd.gif'
+    ],
+    3: [
+        'https://steamuserimages-a.akamaihd.net/ugc/787478092107780459/412981F36DB45365E7C699BE5EB5CDB7F4AB6874/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
+        'https://media.tenor.com/AidYlcjMRFYAAAAM/sleepy-charmeleon.gif',
+        'https://static.wikia.nocookie.net/pokeverse/images/a/a6/C8A7.gif/revision/latest?cb=20180502011922'
+    ],
+    4: [
+        'https://64.media.tumblr.com/e19de381d1bc9681c2ded48dd9b5f6df/tumblr_o30m5a9BI61suqt99o1_500.gif',
+        'https://media.tenor.com/qIhgj8cLz9UAAAAM/charmander-charmander-pokemon.gif',
+        'https://i.pinimg.com/originals/e8/e8/ca/e8e8ca06c9910885b6a507511407fcdb.gif',
+        'https://i.pinimg.com/originals/30/e0/04/30e0046d1ac67d128f01fdc7d7758b03.gif'
+    ]
+};
+
+const tooltipMessages = {
+    "AUSX": {
+        "urgency": {
+            "Critical": "Catastrophic issue with no workaround; business cannot operate.",
+            "High": "Material issue with no workaround; business cannot operate.",
+            "Medium": "Significant issue with no workaround; staff cannot use certain functions.",
+            "Low": "Insignificant issue with workaround; staff experience degraded performance."
+        },
+        "impact": {
+            "Critical": "Complete outage affecting all users; extensive damage; significant financial loss.",
+            "High": "Degradation or partial outage affecting most users; high damage; potential for significant financial loss.",
+            "Medium": ">5 staff affected. Outage affecting a limited number of users; moderate damage.",
+            "Low": "<5 Staff affected. Issue affecting minimal users; negligible damage."
+        }
+    },
+	"AEC": {
+        "urgency": {
+            "Critical": "The AEC website or application is unavailable and there's no workaround, leading to a significant business or operational impact.",
+            "High": "The Service Incident has some operational or business impact, but doesn't immediately affect the AEC website or application.",
+            "Medium": "Service Incidents, that do not result in downtime or have no major impact on AEC website",
+            "Low": "Service Request submission."
+        },
+        "impact": {
+            "Critical": "The Web Hosting Solution is not available. Business or operational impact and with no work around",
+            "High": "The Service Incident has the potential to become a P1 if not fixed soon. Acceptable work around available.",
+            "Medium": "Service Incidents, that do not result in downtime or have no major impact on AEC Website",
+            "Low": "Service Fulfilment Request Submission"
+        }
+		},
+	"VDE": {
+        "urgency": {
+            "Critical": "Impact is currently being experienced or resolution cannot be deployed prior to next event.",
+            "High": "Resolution approach unknown, effort to resolve is unknown or not aware if can be deployed prior to next event.",
+            "Medium": "Resolution approach known, effort to resolve is minimal and can be deployed prior to next event.",
+            "Low": "Immediate solution or workaround can be provided."
+        },
+        "impact": {
+            "Critical": "Severe/critical business impact or no work around affecting mission critical functionality. May include: Loss of functionality, system crashes and does not restart, loss of performance.",
+            "High": "Severe/critical business impact or no work around. DOES NOT affect mission critical functionality. May include: Loss of functionality, partial loss or corruption of data, loss of performance.",
+            "Medium": "Minor loss of service, immediate work around available, mission critical functionality not affected.",
+            "Low": "1 User. Minor loss of service, immediate work around available, mission critical functionality not affected."
+        }
+		},
+	"CBA": {
+        "urgency": {
+            "Critical": "Impact is currently being experienced or resolution cannot be deployed prior to next event.",
+            "High": "Resolution approach unknown, effort to resolve is unknown or not aware if can be deployed prior to next event.",
+            "Medium": "Resolution approach known, effort to resolve is minimal and can be deployed prior to next event.",
+            "Low": "Immediate solution or workaround can be provided."
+        },
+        "impact": {
+            "Critical": "Severe/critical business impact or no work around affecting mission critical functionality. May include: Loss of functionality, system crashes and does not restart, loss of performance.",
+            "High": "Severe/critical business impact or no work around. DOES NOT affect mission critical functionality. May include: Loss of functionality, partial loss or corruption of data, loss of performance.",
+            "Medium": "Minor loss of service, immediate work around available, mission critical functionality not affected.",
+            "Low": "1 User. Minor loss of service, immediate work around available, mission critical functionality not affected."
+        }
+		},
+	"CPM": {
+        "urgency": {           
+            "High": "Safety systems are involved. Production or Process Control Systems are involved. The negative effects of the incident increase rapidly. A minor incident can be prevented from becoming a major incident with immediate action. No workaround is available. Critical or very time-sensitive business processes cannot be performed.",
+            "Medium": "The negative effects of the incident increase somewhat over time. A workaround is not available or is not satisfactory. Important or somewhat time-sensitive business processes cannot be performed, where this is not an immediate issue or risk.",
+            "Low": "The negative effects of the incident increase slightly over time or remain static. A workaround is available. Any business processes that cannot be performed are not critical or particularly time-sensitive."
+        },
+        "impact": {
+            "Critical": "Affects organisation, operational sites, or multiple locations. Critical Business Application unavaliable, Damage to business is high, No work around, major security threat, safety compromised",
+            "High": "Affects important business or operational services or is ≥ 1 location or ≥ 1 functional area. Damage to business is moderate, No work around, Security threat.",
+            "Medium": "Users can perform business and operations functions with minor loss of productivity, or the impact is limited to a group of users, with work around",
+            "Low": "Incident has insignificant impact on business or operational activity and work."
+        }
+		},
+	"PlanIT": {
+        "urgency": {	
+			"Critical": " Catastrophic issue that is a very high risk with no workaround available or Multiple business processes stopped; business unit(s) cannot operate.",
+            "High": "Partial outage of a business-critical service, application or infrastructure component resulting in: Majority of users, Damage to business reputation is high. Has potential to result in significant financial loss",
+            "Medium": "Service, application or infrastructure component unavailable, resulting in: Outage affecting a limited number of users or a single site within the organisation. Damage business reputation is moderate. Unlikely to result in significant financial loss",
+            "Low": "Degradation of service, application or infrastructure component; resulting in one: <5 users affected. Damage to business reputation is negligible. No Possibility of financial loss"
+        },
+        "impact": {           
+            "High": "Material issue that is high risk to the business unit(s) with no workaround available or Business process stopped, staff or critical function cannot operate.",
+            "Medium": "Significant issue that is medium risk to the business unit(s) with no workaround available. Business process affected; staff cannot use certain functions.",
+            "Low": "Insignificant issue that is low risk to the business unit(s) or where a workaround is known. Business process affected; staff experience degraded performance."
+        }
+		},
+	"NHVR": {
+        "urgency": {			
+			"Critical": "Not Defined, if the Urgency is worse than 'High' select this",
+            "High": "Partial outage of a business-critical service, application or infrastructure component resulting in: Majority of users, Damage to business reputation is high. Has potential to result in significant financial loss",
+            "Medium": "Service, application or infrastructure component unavailable, resulting in: Outage affecting a limited number of users or a single site within the organisation. Damage business reputation is moderate. Unlikely to result in significant financial loss",
+            "Low": "Degradation of service, application or infrastructure component; resulting in one: <5 users affected. Damage to business reputation is negligible. No Possibility of financial loss"
+        },
+        "impact": {
+            "Critical": "Not Defined, if the Impact is worse than 'High' select this",
+            "High": "Work Stoppage / No work around. Significant Impact to mission critical operations. Financial penalities.",
+            "Medium": "Function impaired/ Work around available",
+            "Low": "Inconvenient, no financial penalities"
+        }
+		},
+	"NRI": {
+       "urgency": {
+            "Critical": "Catastrophic issue with no workaround; business cannot operate.",
+            "High": "Material issue with no workaround; business cannot operate.",
+            "Medium": "Significant issue with no workaround; staff cannot use certain functions.",
+            "Low": "Insignificant issue with workaround; staff experience degraded performance."
+        },
+        "impact": {
+            "Critical": "Complete outage affecting all users; extensive damage; significant financial loss.",
+            "High": "Degradation or partial outage affecting most users; high damage; potential for significant financial loss.",
+            "Medium": ">5 staff affected. Outage affecting a limited number of users; moderate damage.",
+            "Low": "<5 Staff affected. Issue affecting minimal users; negligible damage."
+        }
+		},
+	"BUSY": {
+       "urgency": {
+            "Critical": "Catastrophic issue with no workaround; business cannot operate.",
+            "High": "Material issue with no workaround; business cannot operate.",
+            "Medium": "Significant issue with no workaround; staff cannot use certain functions.",
+            "Low": "Insignificant issue with workaround; staff experience degraded performance."
+        },
+        "impact": {
+            "Critical": "Complete outage affecting all users; extensive damage; significant financial loss.",
+            "High": "Degradation or partial outage affecting most users; high damage; potential for significant financial loss.",
+            "Medium": ">5 staff affected. Outage affecting a limited number of users; moderate damage.",
+            "Low": "<5 Staff affected. Issue affecting minimal users; negligible damage."
+        }
+		},
+    // ... (keep the rest of your tooltipMessages object the same)
+};
+
+function updateUrgencyOptions() {
+    var client = document.getElementById("clientDropdown").value;
+    var criticalLabel = document.getElementById("criticalLabel");
+
+    if (client === "CPM") {
+        criticalLabel.classList.add("hidden");
+    } else {
+        criticalLabel.classList.remove("hidden");
+    }
+	
+	if (client === "PlanIT") {
+        criticalUrgency.classList.add("hidden");
+    } else {
+        criticalUrgency.classList.remove("hidden");
+    }
+
+    if (client === "CPM" && document.querySelector('input[name="urgency"][value="Critical"]').checked) {
+        document.querySelector('input[name="urgency"][value="High"]').checked = true;
+    }
+
+    updatePriority();
+}
+
+function updatePriority() { 
+    var client = document.getElementById("clientDropdown").value;
+    var urgency = document.querySelector('input[name="urgency"]:checked');
+    var impact = document.querySelector('input[name="impact"]:checked');
+    var resultBox = document.getElementById("result-box");
+
+    if (!urgency || !impact) {
+        resultBox.innerHTML = '<div class="result-text">Please select both urgency and impact.</div>';
+        resultBox.style.backgroundImage = "none";
+        return;
+    }
+	   
+    var priority = getPriority(client, urgency.value, impact.value);
+
+    // Get random gif for this priority
+    const gifs = priorityGifs[priority];
+    const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+    
+    // Update the result box
+    resultBox.style.backgroundImage = "url('" + randomGif + "')";
+    resultBox.innerHTML = '<div class="result-text">Priority: ' + priority + '</div>';
+}
+	
+
+function getPriority(client, urgency, impact) {
+    return priorityData[client][urgency][impact];
+}
+
+function setupButtonPresses() {
+    const urgencyButtons = document.querySelectorAll('#urgencyOptions .radio-button');
+    const impactButtons = document.querySelectorAll('#impactOptions .radio-button');
+
+    function handleButtonPress(buttons) {
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                buttons.forEach(btn => btn.classList.remove('pressed'));
+                this.classList.add('pressed');
+                this.previousElementSibling.click();
+                updatePriority();
+            });
+        });
+    }
+
+    handleButtonPress(urgencyButtons);
+    handleButtonPress(impactButtons);
+}
+
+function setupButtonTooltips() {
+    const tooltip = document.getElementById('buttonTooltip');
+    const clientDropdown = document.getElementById('clientDropdown');
+
+    function showTooltip(button, type, value) {
+        const selectedClient = clientDropdown.value;
+        let message;
+
+        try {
+            message = tooltipMessages[selectedClient][type][value];
+            
+            if (message) {
+                tooltip.textContent = message;
+                tooltip.style.display = 'block';
+
+                // Position the tooltip near the button
+                const rect = button.getBoundingClientRect();
+                tooltip.style.left = rect.left + 'px';
+                tooltip.style.top = (rect.bottom + 5) + 'px';
+            }
+        } catch (error) {
+            console.log('No message defined for this combination');
+        }
+    }
+
+    function hideTooltip() {
+        tooltip.style.display = 'none';
+    }
+
+    const urgencyButtons = document.querySelectorAll('#urgencyOptions .radio-button');
+    const impactButtons = document.querySelectorAll('#impactOptions .radio-button');
+
+    urgencyButtons.forEach(button => {
+        // Get the value from the button's text content
+        const urgencyValue = button.textContent.trim();
+        
+        button.addEventListener('mouseover', function() {
+            showTooltip(this, 'urgency', urgencyValue);
+        });
+
+        button.addEventListener('mouseout', hideTooltip);
+    });
+
+    impactButtons.forEach(button => {
+        // Get the value from the button's text content
+        const impactValue = button.textContent.trim();
+        
+        button.addEventListener('mouseover', function() {
+            showTooltip(this, 'impact', impactValue);
+        });
+
+        button.addEventListener('mouseout', hideTooltip);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const closedPokedex = document.getElementById('closed-pokedex');
+    const openPokedex = document.getElementById('open-pokedex');
+    const closeButton = document.getElementById('close-button');
+    const resultBox = document.getElementById('result-box');
+    const priorityMatrix = document.getElementById('priority-matrix');
+    const openButton = document.getElementById('open-button');
+    const dexoverlay = document.getElementById('dexoverlay');
+    const pokedexContainer = document.getElementById('pokedex-container');
+
+    // Open button click handler
+    openButton.addEventListener('click', function() {
+        dexoverlay.style.display = 'block';
+        pokedexContainer.style.display = 'block';
+        closedPokedex.style.display = 'block';
+    });
+
+    closedPokedex.addEventListener('click', function() {
+        closedPokedex.style.display = 'none';
+        openPokedex.style.display = 'block';
+        openPokedex.classList.add('open-shift');
+        closeButton.style.display = 'block';
+        resultBox.style.display = 'block';
+        priorityMatrix.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', function() {
+        openPokedex.classList.remove('open-shift');
+        openPokedex.style.display = 'none';
+        closedPokedex.style.display = 'block';
+        closeButton.style.display = 'none';
+        resultBox.style.display = 'none';
+        priorityMatrix.style.display = 'none';
+        // Close the overlay and hide the pokedex container
+        dexoverlay.style.display = 'none';
+        pokedexContainer.style.display = 'none';
+    });
+
+    setupButtonPresses();
+    setupButtonTooltips();
+
+    document.getElementById("clientDropdown").addEventListener('change', updateUrgencyOptions);
+});
+
+var loadingScreen = document.querySelector(".loadingScreen");
+window.addEventListener('load', function() {
+  loadingScreen.style.display = 'none';
+})
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+         
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }	
+	   let isEnglish = true;
+
+function toggleLanguage() {
+    isEnglish = !isEnglish;
+
+    // Select elements based on their language type
+    const enElements = document.querySelectorAll('[data-type="en"]');
+    const zhElements = document.querySelectorAll('[data-type="zh"]');
+
+    // Toggle visibility for English and Chinese cards
+    enElements.forEach(element => {
+        element.classList.toggle('hidden', isEnglish);
+    });
+    zhElements.forEach(element => {
+        element.classList.toggle('hidden', !isEnglish);
+    });
+
+    // Update language display and button text
+    document.getElementById('language-toggle').textContent = isEnglish ? 'Chinese' : 'English';
+}
+
+window.onload = function() {
+    toggleLanguage(); // Start with English by default
+};
+
+document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
+
+function toggleVisibility() {
+    const navContainer = document.querySelector('.navContainer');
+    const trainingContainer = document.querySelector('.trainingContainer');
+
+    navContainer.classList.toggle('hidden');
+    trainingContainer.classList.toggle('hidden');
+}
+
+window.onload = function() {
+    toggleLanguage(); // Start with English by default
+};
+
+document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
+document.getElementById('visibility-toggle').addEventListener('click', toggleVisibility);
+
+// Global variable to hold the player instance
+function makeVideoBigger(button) {
+    const videoCard = button.closest('.videoCard');
+    const video = videoCard.querySelector('iframe');
+    const originalVideoStyles = {
+        width: video.style.width,
+        height: video.style.height,
+        position: video.style.position,
+        top: video.style.top,
+        left: video.style.left,
+        transform: video.style.transform,
+        zIndex: video.style.zIndex,
+        borderRadius: video.style.borderRadius
+    };
+
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    overlay.style.zIndex = '999';
+    document.body.appendChild(overlay);
+
+const exitButton = document.createElement('button');
+exitButton.className = 'exit-button';
+exitButton.innerText = 'X';
+exitButton.style.position = 'absolute';
+exitButton.style.top = '20px';
+exitButton.style.right = '20px';
+exitButton.style.zIndex = '1000';
+exitButton.style.backgroundColor = 'transparent'; // Set to transparent
+exitButton.style.color = 'white';
+exitButton.style.border = 'none';
+exitButton.style.padding = '10px';
+exitButton.style.cursor = 'pointer';
+overlay.appendChild(exitButton);
+
+    // Set video styles for enlargement
+    video.style.width = '80%';
+    video.style.height = '80%';
+    video.style.position = 'fixed';
+    video.style.top = '50%';
+    video.style.left = '50%';
+    video.style.transform = 'translate(-50%, -50%)';
+    video.style.zIndex = '1001';
+    video.style.borderRadius = '15px';
+
+    exitButton.addEventListener('click', () => {
+        // Hide the overlay
+        overlay.style.display = 'none';
+        // Reset the video styles
+        video.style.width = originalVideoStyles.width;
+        video.style.height = originalVideoStyles.height;
+        video.style.position = originalVideoStyles.position;
+        video.style.top = originalVideoStyles.top;
+        video.style.left = originalVideoStyles.left;
+        video.style.transform = originalVideoStyles.transform;
+        video.style.zIndex = originalVideoStyles.zIndex;
+        video.style.borderRadius = originalVideoStyles.borderRadius;
+    });
+}
+
+function addVideoRow(videoSrc, description, cardTitle, shortDescription, iframeSrc1, videoSrc2, description2, cardTitle2, shortDescription2, iframeSrc2, videoSrc3, description3, cardTitle3, shortDescription3, iframeSrc3) {
+    const tbody = document.getElementById('videos-tbody');
+    const row = document.createElement('tr');
+    row.innerHTML = 
+        '<td>' +
+            '<div class="videoCard">' +
+                '<div class="video-container">' +                         
+                    '<iframe src="' + iframeSrc1 + '" frameborder="0" scrolling="no" allowfullscreen title="no"></iframe>' +                         
+                '</div>' +
+                '<div class="description">' +
+                    '<h4>' + description + '</h4>' +
+                '</div>' +
+                '<div class="footer">' +
+                    '<h3>' + cardTitle + '</h3>' +
+                    '<p>' + shortDescription + '</p>' +
+                    '<button class="enlargeButton" onclick="makeVideoBigger(this)">Watch Now</button>' +
+                '</div>' +
+            '</div>' +
+        '</td>' +
+        '<td>' +
+            '<div class="videoCard">' +
+                '<div class="video-container">' +
+                    '<iframe src="' + iframeSrc2 + '" frameborder="0" scrolling="no" allowfullscreen title="Embedded Video"></iframe>' +
+                '</div>' +
+                '<div class="description">' +
+                    '<h4>' + description2 + '</h4>' +
+                '</div>' +
+                '<div class="footer">' +
+                    '<h3>' + cardTitle2 + '</h3>' +
+                    '<p>' + shortDescription2 + '</p>' +
+                    '<button class="enlargeButton" onclick="makeVideoBigger(this)">Watch Now</button>' +
+                '</div>' +
+            '</div>' +
+        '</td>' +
+        '<td>' +
+            '<div class="videoCard">' +
+                '<div class="video-container">' +
+                    '<iframe src="' + iframeSrc3 + '" frameborder="0" scrolling="no" allowfullscreen title="Embedded Video"></iframe>' +
+                '</div>' +
+                '<div class="description">' +
+                    '<h4>' + description3 + '</h4>' +
+                '</div>' +
+                '<div class="footer">' +
+                    '<h3>' + cardTitle3 + '</h3>' +
+                    '<p>' + shortDescription3 + '</p>' +
+                    '<button class="enlargeButton" onclick="makeVideoBigger(this)">Watch Now</button>' +
+                '</div>' +
+            '</div>' +
+        '</td>';
+    tbody.appendChild(row);
+}
+
+     addVideoRow(
+    "video1.mp4", 
+    "NHVR", 
+    "MIM Training", 
+    "Major Incident Management process", 
+   "https://asggroupcloud.sharepoint.com/sites/AdelaideSD/_layouts/15/embed.aspx?UniqueId=8a7124f3-ddb2-4da7-a6ae-76a7d68934e9&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
+   "video1.mp4", 
+    "MRWA", 
+    "Induction", 
+    "Introduction to MRWA",    
+  "https://asggroupcloud.sharepoint.com/sites/AdelaideSD/_layouts/15/embed.aspx?UniqueId=832e4fc6-646f-42f7-ab5f-cf4fb03100c1&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
+  "video1.mp4", 
+    "NRI", 
+    "ServiceNow SD Initial setup", 
+    "Setup your favourite list", 
+  "https://asggroupcloud.sharepoint.com/sites/AdelaideSD/_layouts/15/embed.aspx?UniqueId=2216d988-4078-4712-98dd-1586e0347240&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+);
+
+addVideoRow(
+    "video1.mp4", 
+    "NRI", 
+    "Hub Training", 
+    "Hub Tips and Tricks", 
+   "https://asggroupcloud.sharepoint.com/sites/AdelaideSD/_layouts/15/embed.aspx?UniqueId=21f3221a-c9ac-475e-8912-159c5defab20&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
+   "video1.mp4", 
+    "Blank", 
+    "Blank", 
+    "Blank",    
+   "https://s11.gifyu.com/images/SOQjO.gif",
+   "video1.mp4", 
+    "Blank", 
+    "Blank", 
+    "Blank", 
+   "https://s11.gifyu.com/images/SOQjO.gif"
+);
+</script>
