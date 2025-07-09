@@ -1,5 +1,4 @@
 # serviceDeskHub
-# ServiceDeskHub
 
 ServiceDeskHub is a simple, browser-based dashboard that helps you access your most-used IT tools, learning modules, and support links from one central location. This guide will help you download and use it without needing any technical experience.
 
